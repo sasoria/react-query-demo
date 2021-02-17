@@ -12,7 +12,7 @@ const postOptions = (content) => ({
 
 const checkResponse = (response) => {
   if (!response.ok) {
-    throw new Error("Fetch request failed");
+    throw new Error("HTTP request failed");
   }
 };
 
