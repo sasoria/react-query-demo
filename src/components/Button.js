@@ -4,7 +4,7 @@ import { fetcher } from "../api";
 import { lukeUrl, obiWanUrl } from "../api";
 import useMutatePerson from "../hooks/useMutatePerson";
 
-const onClick = (obiWan, mutation) => {
+const replaceLuke = (obiWan, mutation) => {
   mutation.mutate(obiWan);
 };
 
@@ -14,7 +14,7 @@ function Button() {
   const mutation = useMutatePerson(obiWan?.name);
 
   return (
-    <button onClick={() => onClick(obiWan, mutation)}>Bye {luke?.name}</button>
+    <button onClick={() => replaceLuke(obiWan, mutation)}>Bye {luke?.name}</button>
   );
 }
 
